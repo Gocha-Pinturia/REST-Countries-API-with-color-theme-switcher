@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Where in the world?</h1>
+        <button id="theme-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="theme-icon moon-icon"
+          >
+            <path
+              d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="theme-icon sun-icon"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="32"
+              d="M256 48v48M256 416v48M416 256h48M48 256h48M369.44 142.56l-33.94 33.94M176.5 335.5l-33.94 33.94M403.38 403.38l-33.94-33.94M142.56 142.56l-33.94-33.94"
+            />
+            <circle
+              cx="256"
+              cy="256"
+              r="80"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="32"
+            />
+          </svg>
+
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div id="main-view">
+        <div class="controls-container">
+          <div class="search-wrapper">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a country..."
+            />
+          </div>
+          <div class="custom-select-wrapper">
+            <div class="custom-select-trigger">
+              <span>Filter by Region</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="select-arrow"
+              >
+                <path
+                  d="m112 184 144 144 144-144"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="48px"
+                />
+              </svg>
+            </div>
+            <div class="custom-options">
+              <span class="custom-option" data-value="">All Regions</span>
+              <span class="custom-option" data-value="africa">Africa</span>
+              <span class="custom-option" data-value="americas">Americas</span>
+              <span class="custom-option" data-value="asia">Asia</span>
+              <span class="custom-option" data-value="europe">Europe</span>
+              <span class="custom-option" data-value="oceania">Oceania</span>
+            </div>
+          </div>
+        </div>
+        <div id="countries-grid" class="countries-grid"></div>
+      </div>
+      <div id="detail-view" class="detail-view hidden"></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
